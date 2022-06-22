@@ -16,7 +16,7 @@ body{
   background-clip: border-box;
   background-size: cover;
   background-color: rgb(1,1,1);
-  position: absolute;
+  position: fixed;
   top: -100vh;
 }
 #menuContner div{
@@ -35,12 +35,15 @@ body{
 #options div img{
   filter: invert(100%);
 }
-#nav{
-  box-sizing: content-box;
+nav{
   background: #fff;
   position: fixed;
   top: 0;
-  margin-top: 3vw;
+}
+#nav{
+  box-sizing: content-box;
+  background: #fff;
+  margin: 3vw auto 2vw;
   height: auto;
   width: 100vw;
   border-top: 1px solid #ccc;
@@ -168,8 +171,8 @@ h2{
 }
 #imageslider img:nth-child(7){
   left: 156vw;
-}
-*/
+}*/
+
 #meet{
   margin-top: 6vw;
   color: #010;
@@ -219,4 +222,74 @@ h2{
 }
 #gallery div{
   padding: auto;
+}
+#toppicks{
+  color: #000;
+  background: #fff7de;
+}
+#toppicks div{
+  max-width: 80vw;
+  margin-left: 7vw;
+  padding: auto;
+  background: #eee;
+}
+.fig{
+  letter-spacing: .4em;
+}
+.desc{
+  font-size: 1.5em;
+  font-weight: 300;
+}
+#testi{
+  margin: 300px auto 2vw;
+  padding: 300px 7vw 3vw;
+  border: 1px solid #ccc;
+  color: #aabcac;
+}
+#nearbtm{
+  padding: auto;
+  margin: none;
+  background: url("bg1.png") no-repeat;
+  background-clip: border-box;
+  background-size: cover;
+  background-color: rgb(15, 20, 0);
+}
+#btmopt{
+  margin-top: 5vw;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+#btmopt div{
+  padding: 2vw auto;
+  margin: 4vh auto 2vw;
+}
+#abtenv{
+  margin: 300px auto 0;
+  padding-bottom: 5vw;
+}
+.bigp{
+  font-size: .9em;
+  line-height: 2em;
+}
+h3{
+  font-size: 1.3em;
+  font-weight: 300;
+}
+
+footer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: none;
+  font-size: 1em;
+  background: #566474;
+  padding: 4.5vw 0;
+  height: 45vw;
+}
+footer *{
+  padding: auto;
+}
+#totop{
+  margin-top: 10vw;
 }

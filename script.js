@@ -2,12 +2,12 @@ var oldpt;
 function canc(){
   let option = document.getElementById("option");
   option.style.top = "-100vh";
-  option.style.transition = "top 1s ease-in";
+  option.style.transition = "top 0.8s ease-in";
 }
 function menu(){
   let option = document.getElementById("option");
   option.style.top = "0vh";
-  option.style.transition = "top 1s ease-out";
+  option.style.transition = "top 0.4s ease-out";
 }
 function initmove(event){
   let scrolls = document.getElementById("imageslider");
@@ -54,7 +54,7 @@ function scrollimg(newpt){
       let check = scrolls.replace("px", "");
       let tscase = scroll.width;
       if (parseInt(check) > parseInt((tscase)*2.5) + ((tscase/20)*6)){
-        scroll.style.left = `-${(tscase*3) + (tscase/20)}`;
+        scroll.style.left = `-${(tscase*0.5) - (tscase/20)}`;
       }
     }
   }else{
@@ -69,8 +69,8 @@ function scrollimg(newpt){
       scroll.style.left = scrolls;
       let check = scrolls.replace("px", "");
       let tscase = scroll.width;
-      if (((parseInt(check)) < parseInt((tscase)*2.5*-1) + (tscase/20)*6)){
-        scroll.style.left = `+${(tscase*2.5) + (tscase/20)}`;
+      if (((parseInt(check)) < parseInt((tscase)*2.5*-1) - (tscase/20)*6)){
+        scroll.style.left = `+${(tscase*0.5) + (tscase/20)}`;
       }
     }
   }
