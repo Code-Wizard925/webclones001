@@ -43,35 +43,41 @@ function moveimg2(event){
 function scrollimg(newpt){
   if (newpt > oldpt){
     let dist = newpt - oldpt;
-    for (i = 0; i < 6; i++){
+    for (i = 0; i < 7; i++){
       let scrolls = document.getElementById("imageslider");
       scroll = scrolls.children[i];
       scrolls = window.getComputedStyle(scroll);
-      scrolls = scrolls.left;
+      scrolls = scrolls.getPropertyValue("left");
+      console.log(scrolls)
       scrolls = scrolls.replace("px", "");
-      scrolls = `${parseInt(scrolls) + dist/16}px`;
+      scrolls = `${Number(scrolls) + dist/14}px`;
       scroll.style.left = scrolls;
       let check = scrolls.replace("px", "");
+      console.log(check)
       let tscase = scroll.width;
-      if (parseInt(check) > parseInt((tscase)*2.5) + ((tscase/20)*6)){
-        scroll.style.left = `-${(tscase*0.5) - (tscase/20)}`;
+      if (Number(check) > Number(tscase)*3.33){
+        scroll.style.left = `-${Number(tscase)*4.44}`;
       }
     }
   }else{
     let dist = oldpt - newpt;
-    for (i = 0; i < 6; i++){
+    for (i = 0; i < 7; i++){
       let scrolls = document.getElementById("imageslider");
       scroll = scrolls.children[i];
       scrolls = window.getComputedStyle(scroll);
-      scrolls = scrolls.left;
+      scrolls = scrolls.getPropertyValue("left");
       scrolls = scrolls.replace("px", "");
-      scrolls = `${parseInt(scrolls) - dist/16}px`;
+      scrolls = `${Number(scrolls) - dist/14}px`;
       scroll.style.left = scrolls;
       let check = scrolls.replace("px", "");
       let tscase = scroll.width;
-      if (((parseInt(check)) < parseInt((tscase)*2.5*-1) - (tscase/20)*6)){
-        scroll.style.left = `+${(tscase*0.5) + (tscase/20)}`;
+      if ((Number(check)) < (Number(tscase)*-5.55)){
+        scroll.style.left = `+${tscase*2.22}`;
       }
     }
   }
+}
+function scrollToTop() {
+  let top = document.getElementById("eventDesign");
+  top.scrollIntoView({behavior: "smooth"});
 }
