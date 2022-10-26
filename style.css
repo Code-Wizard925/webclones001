@@ -36,13 +36,12 @@ body{
   filter: invert(100%);
 }
 nav{
-  z-index: 1;
-  background: #fff;
   position: fixed;
   top: 0;
+  z-index: 1;
+  background: #fff;
 }
 #nav{
-  z-index: 1;
   box-sizing: content-box;
   background: #fff;
   margin: 3vw auto 2vw;
