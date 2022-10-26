@@ -7,6 +7,7 @@ body{
   text-align: center;
 }
 #option{
+  z-index: 2;
   padding: 1vh auto;
   min-height: 100vh;
   min-width: 100vw;
@@ -42,6 +43,7 @@ nav{
   top: 0;
 }
 #nav{
+  z-index: 1;
   box-sizing: content-box;
   background: #fff;
   margin: 3vw auto 2vw;
