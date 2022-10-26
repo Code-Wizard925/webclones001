@@ -24,7 +24,7 @@
         
       </div>
     </div>
-    <div id="menuContent">
+    <div id="menuContner">
       <div class=>HOME</div>
       <div class=>ABOUT</div>
       <div class=>SERVICES</div>
@@ -71,13 +71,13 @@
       </p>
       <div class="box box2">LEARN MORE</div>
     </div>
-    <div ontouchstart="initmove2(event)" onmousedown="initmove(event)" onmouseup="stopmove()" class="hor" id="imageslider">
+    <div ontouchmove="scrollHandler(event)" ontouchend="stopmove()" onmousedown="initmove(event)" onmouseup="stopmove()" class="hor" id="imageslider">
       <img src="img1.jpg" alt="1" />
       <img src="img3.jpg" alt="2"/>
       <img src="img5.jpg" alt="3"/>
       <img src="img1.jpg" alt="4"/>
       <img src="img3.jpg" alt="5"/>
-      <img src="img2.jpg" alt="6"/>
+      <img src="img1.jpg" alt="6"/>
       <img src="img5.jpg" alt="7"/>
     </div>
     <div id="meet">
@@ -161,7 +161,7 @@
   <footer>
     <div>c with this and that. placeholder<br/> 
       graphied by me, and you.</div>
-    <div title="scroll up" onclick="scrollToTop()">
+    <div title="scroll up" onclick="window.scrollTo(0, 0)">
       <svg height=70 width=70 id="totop">
         <line x1=25 y1=20 x2=35 y2=10 style="stroke: #fff; stroke-width: 1; stroke-linecap: round;"/>
         <line x1=35 y1=10 x2=45 y2=20 style="stroke: #fff; stroke-width: 1; stroke-linecap: round;"/>
